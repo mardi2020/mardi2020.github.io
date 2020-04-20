@@ -1,6 +1,6 @@
 title: My Blog
-author: GitHub User
-email: your-email@domain.com
+author: mardi2020
+email: None
 description: "학교 수업 정리용 블로그"
 show_excerpts: true # set to true to show excerpts on the homepage
 
@@ -9,16 +9,16 @@ show_excerpts: true # set to true to show excerpts on the homepage
 sass:
   sass_dir: _sass
 plainwhite:
-  name: Adam Denisov
-  tagline: Developer. Designer
+  name: Emma Lee
+  tagline: None
   date_format: "%b %-d, %Y"
   sitemap: true # set to true to generate sitemap.xml content
 
   # generate social links in footer
   social_links:
-    twitter: thelehhman
-    github:  thelehhman
-    linkedIn: in/thelehhman
+    #twitter: thelehhman
+    github:  mardi2020
+    #linkedIn: in/thelehhman
     rss: rss
     # dribbble: jekyll
     # facebook: jekyll
