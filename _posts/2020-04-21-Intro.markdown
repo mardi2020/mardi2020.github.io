@@ -1,7 +1,8 @@
 ---
 layout: post
-title:  "Intro"
+title:  "포스팅"
 date:  2020-04-21 12:09 +0900
+categories: Python
 ---
 GitHub Blog 
 학교 수업 정리용 블로그
