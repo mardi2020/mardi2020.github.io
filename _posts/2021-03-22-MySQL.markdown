@@ -5,22 +5,22 @@ date:  2021-03-22 13:16 +0900
 categories: Database
 ---
 ## MySQL 로그인
-
 ```Shell
 mysql -u root -p
 Enter password:
 ```
-
 ## MySQL DB 목록 보기
 ```
 mysql> SHOW databases;
 ```
-
 ## DB 생성
 ```SQL
 CREATE DATABASE [DB_name] default CHARACTER SET UTF8;
 ```
-
+## DB 삭제
+```SQL
+DROP DATABASE [DB_name];
+```
 ## CREATE TABLE
 ```SQL
 CREATE TABLE [TABLE_name](
@@ -29,46 +29,43 @@ CREATE TABLE [TABLE_name](
   address VARCHAR(32) DEFAULT 'Seoul'
 )
 ```
-
-## TABLE 구조 확인하기
+## 테이블 삭제
+```
+DROP TABLE [TABLE_name];
+DELETE FROM [TABLE_name];
+```
+## 테이블 구조 확인하기
 ```SQL
 DESC [TABLE_name];
 ```
-
-## 데이터 삽입
-## MySQL 로그인
-
-```Shell
-mysql -u root -p
-Enter password:
-```
-
-## MySQL DB 목록 보기
-```
-mysql> SHOW databases;
-```
-
-## DB 생성
+## 테이블 이름 변경 
+TABLE_name -> rename
 ```SQL
-CREATE DATABASE [DB_name] default CHARACTER SET UTF8;
+ALTER TABLE [TABLE_name] RENAME TO [rename];
 ```
-
-## CREATE TABLE
+## 테이블 칼럼, 제약조건 추가
 ```SQL
-CREATE TABLE [TABLE_name](
-  id INT PRIMARY KEY <AUTO_INCREMENT>,
-  name VARCHAR(20) NOT NULL,
-  address VARCHAR(32) DEFAULT 'Seoul'
-)
+ALTER TABLE [TABLE_name] ADD COLUMN [column_name] INT NOT NULL AFTER id,
+ADD PRIMARY KEY (id);
 ```
-
-## TABLE 구조 확인하기
+## 테이블 변경
 ```SQL
-DESC [TABLE_name];
+ALTER TABLE [TABLE_name] MODIFY COLUMN [column] BIGINT DEFAULT 100000;
 ```
-
 ## 데이터 삽입
 컬럼 형식에 맞게 데이터 형식을 맞추면 된다.
 ```SQL
 INSERT INTO [TABLE_name](columns, ...) VALUES(values, ...);
+```
+## 데이터 삭제
+```SQL
+DELETE FROM [TABLE_name] WHERE [condition];
+```
+## 데이터 변경
+```SQL
+UPDATE [TABLE_name] SET [column] = [VALUES] WHERE [condition];
+```
+## 제약조건 제거
+```SQL
+ALTER TABLE [TABLE_name] DROP CLOUMN [column_name], DROP PRIMARY KEY;
 ```
