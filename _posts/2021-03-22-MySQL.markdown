@@ -22,7 +22,7 @@ CREATE DATABASE [DB_name] default CHARACTER SET UTF8;
 ```
 
 ## CREATE TABLE
-```
+```SQL
 CREATE TABLE [TABLE_name](
   id INT PRIMARY KEY <AUTO_INCREMENT>,
   name VARCHAR(20) NOT NULL,
@@ -31,7 +31,7 @@ CREATE TABLE [TABLE_name](
 ```
 
 ## TABLE 구조 확인하기
-```
+```SQL
 DESC [TABLE_name];
 ```
 
@@ -54,7 +54,7 @@ CREATE DATABASE [DB_name] default CHARACTER SET UTF8;
 ```
 
 ## CREATE TABLE
-```
+```SQL
 CREATE TABLE [TABLE_name](
   id INT PRIMARY KEY <AUTO_INCREMENT>,
   name VARCHAR(20) NOT NULL,
@@ -63,12 +63,12 @@ CREATE TABLE [TABLE_name](
 ```
 
 ## TABLE 구조 확인하기
-```
+```SQL
 DESC [TABLE_name];
 ```
 
 ## 데이터 삽입
 컬럼 형식에 맞게 데이터 형식을 맞추면 된다.
-```
+```SQL
 INSERT INTO [TABLE_name](columns, ...) VALUES(values, ...);
 ```
