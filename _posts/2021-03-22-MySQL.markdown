@@ -4,15 +4,71 @@ title:  "SQL 정리 - MySQL"
 date:  2021-03-22 13:16 +0900
 categories: Database
 ---
-GitHub Blog 
-학교 수업 정리용 블로그
+## MySQL 로그인
 
-```python
-print("Hello World!")
+```Shell
+mysql -u root -p
+Enter password:
 ```
 
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
+## MySQL DB 목록 보기
+```
+mysql> SHOW databases;
+```
 
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+## DB 생성
+```SQL
+CREATE DATABASE [DB_name] default CHARACTER SET UTF8;
+```
+
+## CREATE TABLE
+```
+CREATE TABLE [TABLE_name](
+  id INT PRIMARY KEY <AUTO_INCREMENT>,
+  name VARCHAR(20) NOT NULL,
+  address VARCHAR(32) DEFAULT 'Seoul'
+)
+```
+
+## TABLE 구조 확인하기
+```
+DESC [TABLE_name];
+```
+
+## 데이터 삽입
+## MySQL 로그인
+
+```Shell
+mysql -u root -p
+Enter password:
+```
+
+## MySQL DB 목록 보기
+```
+mysql> SHOW databases;
+```
+
+## DB 생성
+```SQL
+CREATE DATABASE [DB_name] default CHARACTER SET UTF8;
+```
+
+## CREATE TABLE
+```
+CREATE TABLE [TABLE_name](
+  id INT PRIMARY KEY <AUTO_INCREMENT>,
+  name VARCHAR(20) NOT NULL,
+  address VARCHAR(32) DEFAULT 'Seoul'
+)
+```
+
+## TABLE 구조 확인하기
+```
+DESC [TABLE_name];
+```
+
+## 데이터 삽입
+컬럼 형식에 맞게 데이터 형식을 맞추면 된다.
+```
+INSERT INTO [TABLE_name](columns, ...) VALUES(values, ...);
+```
